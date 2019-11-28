@@ -1,5 +1,17 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="User Id" value="" placeholder="123">
-  </mat-form-field>
-</form>
+<div class="home">
+  <form>
+    <mat-form-field class="home--input" appearance="outline">
+      <mat-label>UserId</mat-label>
+      <input type="number" name="userId" [(ngModel)]="userId" matInput placeholder="User Id" value="">
+      <mat-hint>123 ou 456</mat-hint>
+    </mat-form-field>
+    <button (click)="validateUserId()" mat-raised-button color="primary">Catch Time</button>
+
+    <div class="home--time">
+      User Time: {{ currentUserTime}}
+    </div>
+    <div class="home--time" *ngIf="!isUserTimezoneSameAsNavigator">
+      Navigator Time: {{currentNavigatorTime}}
+    </div>
+  </form>
+</div>

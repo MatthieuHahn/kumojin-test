@@ -1,0 +1,16 @@
+.home {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  width: fit-content;
+
+  &--input {
+    color: #FFFFFF;
+  }
+
+  &--time {
+    color: #FFFFFF;
+  }
+}
