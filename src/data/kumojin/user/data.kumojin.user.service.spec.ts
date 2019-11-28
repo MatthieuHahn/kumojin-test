@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { Data.Kumojin.UserService } from './data.kumojin.user.service';
+import { UserDataService } from './data.kumojin.user.service';
 
-describe('Data.Kumojin.UserService', () => {
+describe('UserDataService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: Data.Kumojin.UserService = TestBed.get(Data.Kumojin.UserService);
+    const service: UserDataService = TestBed.get(UserDataService);
     expect(service).toBeTruthy();
   });
 });
