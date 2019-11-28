@@ -1,12 +1,23 @@
-import { TestBed } from '@angular/core/testing';
-
+import { TestBed, getTestBed } from '@angular/core/testing';
 import { UserDataService } from './data.kumojin.user.service';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('UserDataService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let injector: TestBed;
+  let service: UserDataService;
+  let httpMock: HttpTestingController;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [UserDataService]
+    });
+    injector = getTestBed();
+    service = injector.get(UserDataService);
+    httpMock = injector.get(HttpTestingController);
+  });
 
   it('should be created', () => {
-    const service: UserDataService = TestBed.get(UserDataService);
     expect(service).toBeTruthy();
   });
 });

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/data/model/user/data.model.user.service';
+import { UserDataService } from 'src/data/kumojin/user/data.kumojin.user.service';
 import { User } from 'src/types/user/user';
 import { TimeService } from 'src/services/time/time.service';
 
@@ -16,13 +16,13 @@ export class HomeComponent implements OnInit {
   currentUserTime: String = '';
   currentNavigatorTime: String = '';
 
-  constructor(private userService: UserService, private timeService: TimeService) { }
+  constructor(private userDataService: UserDataService, private timeService: TimeService) { }
 
   ngOnInit() {
   }
 
   validateUserId() {
-    this.userService
+    this.userDataService
       .get(this.userId)
       .subscribe(
         user => {
