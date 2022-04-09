@@ -25,7 +25,7 @@
     "angular-moment-timezone": "^1.7.1",
     "core-js": "^3.4.5",
     "express": "^4.17.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "moment-timezone": "^0.5.27",
     "path": "^0.12.7",
     "rxjs": "~6.5.3",
